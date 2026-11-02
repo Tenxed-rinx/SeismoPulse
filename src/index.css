@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-roboto: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Roboto Mono', 'JetBrains Mono', monospace;
+  --font-roboto-mono: 'Roboto Mono', monospace;
+  --font-serif: 'Roboto Serif', Georgia, Cambria, serif;
+  --font-roboto-serif: 'Roboto Serif', Georgia, serif;
+  --font-slab: 'Roboto Slab', serif;
+  --font-roboto-slab: 'Roboto Slab', serif;
+  --font-display: 'Plus Jakarta Sans', 'Roboto', sans-serif;
+}
+
+@layer base {
+  :root {
+    --font-roboto: 'Roboto', sans-serif;
+    --font-roboto-mono: 'Roboto Mono', monospace;
+    --font-roboto-serif: 'Roboto Serif', serif;
+    --font-roboto-slab: 'Roboto Slab', serif;
+  }
+
+  html, body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.015em;
+  }
+
+  code, pre, .font-mono, .tabular-nums {
+    font-family: 'Roboto Mono', 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.font-roboto {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.font-roboto-mono {
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.font-roboto-serif {
+  font-family: 'Roboto Serif', Georgia, Cambria, serif !important;
+}
+
+.font-roboto-slab {
+  font-family: 'Roboto Slab', serif !important;
+}
+
+.font-display {
+  font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif !important;
+}
+
+/* Light Theme Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Crisp Light Theme styling for Leaflet controls and popups */
+.leaflet-container {
+  background: #F8FAFC !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1px solid #E2E8F0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.15) !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+  color: #0F172A !important;
+}
+
+.leaflet-popup-tip {
+  background: #FFFFFF !important;
+  border: 1px solid #E2E8F0 !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: #FFFFFF !important;
+  color: #334155 !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.15s ease;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #64748B !important;
+  font-size: 10px !important;
+  border-top-left-radius: 4px;
+}
+.leaflet-control-attribution a {
+  color: #2563EB !important;
+}
+
+/* Epicenter pulse keyframe */
+@keyframes seismic-pulse {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.pulse-ring {
+  animation: seismic-pulse 2s cubic-bezier(0.2, 0.6, 0.4, 1) infinite;
+  transform-origin: center;
+}

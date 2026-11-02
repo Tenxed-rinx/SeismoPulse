@@ -1,0 +1,6 @@
+{
+  "summary":  "Architecture and implementation plan for SeismoPulse Studio, an industry-grade earthquake analysis and visualizer platform featuring real-time USGS mapping with tectonic fault overlays, built-in Power BI analytics suite, MongoDB aggregation pipeline studio, predictive hazard tools, historical catastrophe archives, interactive safety quiz, and global helpline directory.",
+  "updatedAt":  "2026-11-02T08:37:39.435484789Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
